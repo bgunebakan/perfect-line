@@ -10,3 +10,7 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Admin software/PerfectLine-admin/nbproject/private/
+/Admin software/PerfectLine-admin/build/
+/Admin software/PerfectLine-Admin(netbeans)/nbproject/private/
+/Admin software/PerfectLine-Admin(netbeans)/build/

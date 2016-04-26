@@ -15,8 +15,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Welcome welcome = new Welcome();
         TeamSelect teamselect = new TeamSelect();
-        teamselect.setVisible(true);
+        
     }
     
 }

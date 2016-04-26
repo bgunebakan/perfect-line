@@ -16,6 +16,7 @@ public class TeamSelect extends javax.swing.JFrame {
      */
     public TeamSelect() {
         initComponents();
+        this.setVisible(true);
     }
 
     /**
@@ -62,7 +63,6 @@ public class TeamSelect extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         MainUi mainui = new MainUi();
-        mainui.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 

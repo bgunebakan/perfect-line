@@ -5,6 +5,13 @@
  */
 package perfectline.admin;
 
+import java.awt.Dimension;
+import java.awt.Toolkit;
+import java.util.Collections;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.ListModel;
+
 /**
  *
  * @author gunebakan
@@ -16,6 +23,8 @@ public class TeamSelect extends javax.swing.JFrame {
      */
     public TeamSelect() {
         initComponents();
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         this.setVisible(true);
     }
 
@@ -38,8 +47,9 @@ public class TeamSelect extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Listeden Takım Üyelerinizi Seçiniz.");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
 
         jButton1.setText("Tamam");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -50,20 +60,28 @@ public class TeamSelect extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
 
         TeamList.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            String[] strings = { "Quark 0", "Quark 1" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
         jScrollPane1.setViewportView(TeamList);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 180, 230));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 260, 230));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        MainUi mainui = new MainUi();
-        this.setVisible(false);
+        if(Collections.EMPTY_LIST == TeamList.getSelectedValuesList() ){
+            
+            JOptionPane.showMessageDialog(new JFrame(), "Lütfen Takım Üyelerinizi Seçiniz..", "Hata!",JOptionPane.ERROR_MESSAGE);
+            
+        } else {
+            
+            MainUi mainui = new MainUi(TeamList.getModel());
+            this.setVisible(false);    
+        }
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

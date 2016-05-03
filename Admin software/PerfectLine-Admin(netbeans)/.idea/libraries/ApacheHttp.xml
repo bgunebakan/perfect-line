@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="ApacheHttp">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/httpmime-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/httpclient-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/commons-codec-1.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/httpcore-4.4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/fluent-hc-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/jna-platform-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/httpclient-win-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/httpclient-cache-4.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ApacheHttp/jna-4.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

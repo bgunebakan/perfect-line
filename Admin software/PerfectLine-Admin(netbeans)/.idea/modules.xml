@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PerfectLineAdmin.iml" filepath="$PROJECT_DIR$/PerfectLineAdmin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PerfectLine-Admin(netbeans).iml" filepath="$PROJECT_DIR$/PerfectLine-Admin(netbeans).iml" />
     </modules>
   </component>
 </project>

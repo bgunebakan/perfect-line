@@ -7,10 +7,8 @@ package perfectline.admin;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.ListModel;
 /**
  *
  * @author gunebakan
@@ -20,11 +18,32 @@ public class MainUi extends javax.swing.JFrame {
     /**
      * Creates new form MainUi
      */
+    
+    String teamName = "Team1";
+    
+    
     public MainUi() {
         
         initComponents();        
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
+        
+        //clear Team buttons
+        this.quark131.setVisible(false);
+        this.quark132.setVisible(false);
+        this.quark133.setVisible(false);
+        this.quark134.setVisible(false);
+        this.quark135.setVisible(false);
+        this.quark136.setVisible(false);
+        this.quark137.setVisible(false);
+        this.quark138.setVisible(false);
+        this.quark139.setVisible(false);
+        this.quark140.setVisible(false);
+        this.quark141.setVisible(false);
+        this.quark142.setVisible(false);
+        this.quark143.setVisible(false);
+        this.quark144.setVisible(false);
+        this.quark145.setVisible(false);
         
         this.setVisible(true);
     }
@@ -38,13 +57,40 @@ public class MainUi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TeamList = new javax.swing.JList<String>();
         jLabel1 = new javax.swing.JLabel();
-        jToggleButton1 = new javax.swing.JToggleButton();
         jLabel2 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        allList = new javax.swing.JList();
+        AllList = new javax.swing.JPanel();
+        quark101 = new javax.swing.JLabel();
+        quark102 = new javax.swing.JLabel();
+        quark103 = new javax.swing.JLabel();
+        quark104 = new javax.swing.JLabel();
+        quark105 = new javax.swing.JLabel();
+        quark106 = new javax.swing.JLabel();
+        quark107 = new javax.swing.JLabel();
+        quark108 = new javax.swing.JLabel();
+        quark110 = new javax.swing.JLabel();
+        quark109 = new javax.swing.JLabel();
+        quark111 = new javax.swing.JLabel();
+        quark112 = new javax.swing.JLabel();
+        quark113 = new javax.swing.JLabel();
+        quark114 = new javax.swing.JLabel();
+        quark115 = new javax.swing.JLabel();
+        TeamList = new javax.swing.JPanel();
+        quark131 = new javax.swing.JLabel();
+        quark132 = new javax.swing.JLabel();
+        quark133 = new javax.swing.JLabel();
+        quark134 = new javax.swing.JLabel();
+        quark135 = new javax.swing.JLabel();
+        quark136 = new javax.swing.JLabel();
+        quark137 = new javax.swing.JLabel();
+        quark138 = new javax.swing.JLabel();
+        quark139 = new javax.swing.JLabel();
+        quark140 = new javax.swing.JLabel();
+        quark141 = new javax.swing.JLabel();
+        quark142 = new javax.swing.JLabel();
+        quark143 = new javax.swing.JLabel();
+        quark144 = new javax.swing.JLabel();
+        quark145 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -53,31 +99,270 @@ public class MainUi extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PerfectLine Takım Haberleşme Sistemi");
+        setPreferredSize(new java.awt.Dimension(940, 600));
         setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jScrollPane1.setViewportView(TeamList);
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Takım Listesi");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
 
-        jToggleButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jToggleButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jToggleButton1.setText("Kayda Başla");
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Tüm kullanıcılar");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
 
-        allList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Quark 101", "Quark 102", "Quark 103" };
-            public int getSize() { return strings.length; }
-            public Object getElementAt(int i) { return strings[i]; }
-        });
-        allList.addMouseListener(new java.awt.event.MouseAdapter() {
+        AllList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        quark101.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark101.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark101.setText("101");
+        quark101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                allListMouseClicked(evt);
+                quark101MouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(allList);
+        AllList.add(quark101);
+
+        quark102.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark102.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark102.setText("102");
+        quark102.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark102MouseClicked(evt);
+            }
+        });
+        AllList.add(quark102);
+
+        quark103.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark103.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark103.setText("103");
+        quark103.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark103MouseClicked(evt);
+            }
+        });
+        AllList.add(quark103);
+
+        quark104.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark104.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark104.setText("104");
+        quark104.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark104MouseClicked(evt);
+            }
+        });
+        AllList.add(quark104);
+
+        quark105.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark105.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark105.setText("105");
+        quark105.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark105MouseClicked(evt);
+            }
+        });
+        AllList.add(quark105);
+
+        quark106.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark106.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark106.setText("106");
+        quark106.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark106MouseClicked(evt);
+            }
+        });
+        AllList.add(quark106);
+
+        quark107.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark107.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark107.setText("107");
+        quark107.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark107MouseClicked(evt);
+            }
+        });
+        AllList.add(quark107);
+
+        quark108.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark108.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark108.setText("108");
+        quark108.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark108MouseClicked(evt);
+            }
+        });
+        AllList.add(quark108);
+
+        quark110.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark110.setText("109");
+        quark110.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark110MouseClicked(evt);
+            }
+        });
+        AllList.add(quark110);
+
+        quark109.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark109.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark109.setText("110");
+        quark109.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark109MouseClicked(evt);
+            }
+        });
+        AllList.add(quark109);
+
+        quark111.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark111.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark111.setText("111");
+        quark111.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark111MouseClicked(evt);
+            }
+        });
+        AllList.add(quark111);
+
+        quark112.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark112.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark112.setText("112");
+        quark112.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark112MouseClicked(evt);
+            }
+        });
+        AllList.add(quark112);
+
+        quark113.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark113.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark113.setText("113");
+        quark113.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark113MouseClicked(evt);
+            }
+        });
+        AllList.add(quark113);
+
+        quark114.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark114.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark114.setText("114");
+        quark114.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark114MouseClicked(evt);
+            }
+        });
+        AllList.add(quark114);
+
+        quark115.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark115.setText("115");
+        quark115.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark115MouseClicked(evt);
+            }
+        });
+        AllList.add(quark115);
+
+        getContentPane().add(AllList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 380, 420));
+
+        TeamList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        quark131.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark131.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark131.setText("101");
+        TeamList.add(quark131);
+
+        quark132.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark132.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark132.setText("102");
+        quark132.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark132MouseClicked(evt);
+            }
+        });
+        TeamList.add(quark132);
+
+        quark133.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark133.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark133.setText("103");
+        quark133.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark133MouseClicked(evt);
+            }
+        });
+        TeamList.add(quark133);
+
+        quark134.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark134.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark134.setText("104");
+        TeamList.add(quark134);
+
+        quark135.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark135.setText("105");
+        TeamList.add(quark135);
+
+        quark136.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark136.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark136.setText("106");
+        TeamList.add(quark136);
+
+        quark137.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark137.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark137.setText("107");
+        quark137.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark137MouseClicked(evt);
+            }
+        });
+        TeamList.add(quark137);
+
+        quark138.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark138.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark138.setText("108");
+        TeamList.add(quark138);
+
+        quark139.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark139.setText("109");
+        TeamList.add(quark139);
+
+        quark140.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark140.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark140.setText("110");
+        TeamList.add(quark140);
+
+        quark141.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark141.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark141.setText("111");
+        TeamList.add(quark141);
+
+        quark142.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark142.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark142.setText("112");
+        quark142.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark142MouseClicked(evt);
+            }
+        });
+        TeamList.add(quark142);
+
+        quark143.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark143.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark143.setText("113");
+        TeamList.add(quark143);
+
+        quark144.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark144.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark144.setText("114");
+        TeamList.add(quark144);
+
+        quark145.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark145.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark145.setText("115");
+        TeamList.add(quark145);
+
+        getContentPane().add(TeamList, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 380, 420));
 
         jMenu1.setText("Dosya");
 
@@ -105,42 +390,6 @@ public class MainUi extends javax.swing.JFrame {
 
         setJMenuBar(jMenuBar1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1)
-                        .addGap(135, 135, 135))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(34, 34, 34)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 397, Short.MAX_VALUE)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 405, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(48, Short.MAX_VALUE))
-        );
-
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -154,18 +403,214 @@ public class MainUi extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
-    private void allListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_allListMouseClicked
-        System.out.println(" - " + allList.getSelectedValue() + allList.getSelectedIndex());
+    private void quark102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark102MouseClicked
+        Client client102 = new Client(102);
+        if(client102.Channelcommand("add-channel", teamName)){
+            this.quark102.setVisible(false);
+            this.quark132.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
         
         
-        allList.clearSelection();
+    }//GEN-LAST:event_quark102MouseClicked
+
+    private void quark107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark107MouseClicked
+        Client client107 = new Client(107);
+        if(client107.Channelcommand("add-channel", teamName)){
+            this.quark107.setVisible(false);
+            this.quark137.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
         
-    }//GEN-LAST:event_allListMouseClicked
+    }//GEN-LAST:event_quark107MouseClicked
+
+    private void quark112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark112MouseClicked
+        Client client112 = new Client(112);
+        if(client112.Channelcommand("add-channel", teamName)){
+            this.quark112.setVisible(false);
+            this.quark142.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_quark112MouseClicked
+
+    private void quark132MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark132MouseClicked
+        //Client client112 = new Client(112);
+        //client112.Channelcommand("remove-channel", teamName);
+        this.quark132.setVisible(false);
+        this.quark102.setVisible(true);
+    }//GEN-LAST:event_quark132MouseClicked
+
+    private void quark137MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark137MouseClicked
+        this.quark137.setVisible(false);
+        this.quark107.setVisible(true);
+    }//GEN-LAST:event_quark137MouseClicked
+
+    private void quark142MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark142MouseClicked
+        this.quark142.setVisible(false);
+        this.quark112.setVisible(true);
+    }//GEN-LAST:event_quark142MouseClicked
+
+    private void quark101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark101MouseClicked
+        Client client101 = new Client(101);
+        if(client101.Channelcommand("add-channel", teamName)){
+            this.quark101.setVisible(false);
+            this.quark131.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark101MouseClicked
+
+    private void quark103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark103MouseClicked
+        Client client103 = new Client(103);
+        if(client103.Channelcommand("add-channel", teamName)){
+            this.quark103.setVisible(false);
+            this.quark133.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+    }//GEN-LAST:event_quark103MouseClicked
+
+    private void quark104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark104MouseClicked
+        Client client104 = new Client(104);
+        if(client104.Channelcommand("add-channel", teamName)){
+            this.quark104.setVisible(false);
+            this.quark134.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark104MouseClicked
+
+    private void quark105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark105MouseClicked
+        Client client105 = new Client(105);
+        if(client105.Channelcommand("add-channel", teamName)){
+            this.quark105.setVisible(false);
+            this.quark135.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark105MouseClicked
+
+    private void quark106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark106MouseClicked
+        Client client106 = new Client(106);
+        if(client106.Channelcommand("add-channel", teamName)){
+            this.quark106.setVisible(false);
+            this.quark136.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark106MouseClicked
+
+    private void quark108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark108MouseClicked
+        Client client108 = new Client(108);
+        if(client108.Channelcommand("add-channel", teamName)){
+            this.quark108.setVisible(false);
+            this.quark138.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark108MouseClicked
+
+    private void quark110MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark110MouseClicked
+        Client client110 = new Client(110);
+        if(client110.Channelcommand("add-channel", teamName)){
+            this.quark110.setVisible(false);
+            this.quark140.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark110MouseClicked
+
+    private void quark109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark109MouseClicked
+        Client client109 = new Client(109);
+        if(client109.Channelcommand("add-channel", teamName)){
+            this.quark109.setVisible(false);
+            this.quark139.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark109MouseClicked
+
+    private void quark111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark111MouseClicked
+        Client client111 = new Client(111);
+        if(client111.Channelcommand("add-channel", teamName)){
+            this.quark111.setVisible(false);
+            this.quark141.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark111MouseClicked
+
+    private void quark113MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark113MouseClicked
+        Client client113 = new Client(113);
+        if(client113.Channelcommand("add-channel", teamName)){
+            this.quark113.setVisible(false);
+            this.quark143.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark113MouseClicked
+
+    private void quark114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark114MouseClicked
+        Client client114 = new Client(114);
+        if(client114.Channelcommand("add-channel", teamName)){
+            this.quark114.setVisible(false);
+            this.quark144.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_quark114MouseClicked
+
+    private void quark115MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark115MouseClicked
+        Client client115 = new Client(115);
+        if(client115.Channelcommand("add-channel", teamName)){
+            this.quark115.setVisible(false);
+            this.quark145.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+       
+        
+    }//GEN-LAST:event_quark115MouseClicked
+
+    private void quark133MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark133MouseClicked
+        Client client103 = new Client(103);
+        if(client103.Channelcommand("remove-channel", teamName)){
+            this.quark133.setVisible(false);
+            this.quark103.setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_quark133MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JList<String> TeamList;
-    private javax.swing.JList allList;
+    private javax.swing.JPanel AllList;
+    private javax.swing.JPanel TeamList;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
@@ -173,8 +618,35 @@ public class MainUi extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JLabel quark101;
+    private javax.swing.JLabel quark102;
+    private javax.swing.JLabel quark103;
+    private javax.swing.JLabel quark104;
+    private javax.swing.JLabel quark105;
+    private javax.swing.JLabel quark106;
+    private javax.swing.JLabel quark107;
+    private javax.swing.JLabel quark108;
+    private javax.swing.JLabel quark109;
+    private javax.swing.JLabel quark110;
+    private javax.swing.JLabel quark111;
+    private javax.swing.JLabel quark112;
+    private javax.swing.JLabel quark113;
+    private javax.swing.JLabel quark114;
+    private javax.swing.JLabel quark115;
+    private javax.swing.JLabel quark131;
+    private javax.swing.JLabel quark132;
+    private javax.swing.JLabel quark133;
+    private javax.swing.JLabel quark134;
+    private javax.swing.JLabel quark135;
+    private javax.swing.JLabel quark136;
+    private javax.swing.JLabel quark137;
+    private javax.swing.JLabel quark138;
+    private javax.swing.JLabel quark139;
+    private javax.swing.JLabel quark140;
+    private javax.swing.JLabel quark141;
+    private javax.swing.JLabel quark142;
+    private javax.swing.JLabel quark143;
+    private javax.swing.JLabel quark144;
+    private javax.swing.JLabel quark145;
     // End of variables declaration//GEN-END:variables
 }

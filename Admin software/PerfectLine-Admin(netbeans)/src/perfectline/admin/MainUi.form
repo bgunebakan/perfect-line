@@ -8,7 +8,7 @@
         <Property name="useNullLayout" type="boolean" value="true"/>
       </Layout>
       <SubComponents>
-        <MenuItem class="javax.swing.JMenuItem" name="popupQuarknumber">
+        <MenuItem class="javax.swing.JMenuItem" name="teampopupQuarknumber">
           <Properties>
             <Property name="text" type="java.lang.String" value="quarkNumber"/>
             <Property name="enabled" type="boolean" value="false"/>
@@ -28,6 +28,36 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeQuarkActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPopupMenu" name="allListPopup">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="allpopupQuarknumber">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="quarkNumber"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="talkAll">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#xd6;zel Konu&#x15f;ma"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="talkAllActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="addQuark">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tak&#x131;mdan &#xc7;&#x131;kart"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addQuarkActionPerformed"/>
           </Events>
         </MenuItem>
       </SubComponents>
@@ -136,7 +166,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="70" width="350" height="420"/>
+          <AbsoluteConstraints x="10" y="70" width="290" height="420"/>
         </Constraint>
       </Constraints>
 
@@ -364,7 +394,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="580" y="70" width="360" height="420"/>
+          <AbsoluteConstraints x="650" y="70" width="290" height="420"/>
         </Constraint>
       </Constraints>
 

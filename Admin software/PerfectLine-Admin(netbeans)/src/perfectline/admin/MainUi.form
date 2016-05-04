@@ -2,6 +2,36 @@
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
+    <Container class="javax.swing.JPopupMenu" name="teamListPopup">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+      <SubComponents>
+        <MenuItem class="javax.swing.JMenuItem" name="popupQuarknumber">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="quarkNumber"/>
+            <Property name="enabled" type="boolean" value="false"/>
+          </Properties>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="talkButton">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#xd6;zel Konu&#x15f;ma"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="talkButtonActionPerformed"/>
+          </Events>
+        </MenuItem>
+        <MenuItem class="javax.swing.JMenuItem" name="removeQuark">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tak&#x131;mdan &#xc7;&#x131;kart"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="removeQuarkActionPerformed"/>
+          </Events>
+        </MenuItem>
+      </SubComponents>
+    </Container>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -50,6 +80,9 @@
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="formMouseClicked"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -103,7 +136,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="10" y="70" width="380" height="420"/>
+          <AbsoluteConstraints x="10" y="70" width="350" height="420"/>
         </Constraint>
       </Constraints>
 
@@ -115,7 +148,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="101"/>
           </Properties>
@@ -129,7 +162,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="102"/>
           </Properties>
@@ -143,7 +176,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="103"/>
           </Properties>
@@ -157,7 +190,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="104"/>
           </Properties>
@@ -185,7 +218,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="106"/>
           </Properties>
@@ -199,7 +232,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="107"/>
           </Properties>
@@ -213,7 +246,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="108"/>
           </Properties>
@@ -241,7 +274,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="110"/>
           </Properties>
@@ -255,7 +288,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="111"/>
           </Properties>
@@ -269,7 +302,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="112"/>
           </Properties>
@@ -283,7 +316,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="113"/>
           </Properties>
@@ -297,7 +330,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="114"/>
           </Properties>
@@ -331,7 +364,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="560" y="70" width="380" height="420"/>
+          <AbsoluteConstraints x="580" y="70" width="360" height="420"/>
         </Constraint>
       </Constraints>
 
@@ -343,7 +376,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="101"/>
           </Properties>
@@ -354,7 +387,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="102"/>
           </Properties>
@@ -368,7 +401,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="103"/>
           </Properties>
@@ -382,7 +415,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="104"/>
           </Properties>
@@ -404,7 +437,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="106"/>
           </Properties>
@@ -415,7 +448,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="107"/>
           </Properties>
@@ -429,7 +462,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="108"/>
           </Properties>
@@ -451,7 +484,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="110"/>
           </Properties>
@@ -462,7 +495,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="111"/>
           </Properties>
@@ -473,7 +506,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="112"/>
           </Properties>
@@ -487,7 +520,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="113"/>
           </Properties>
@@ -498,7 +531,7 @@
               <Font name="Tahoma" size="14" style="1"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\gunebakan\Documents\perfect-line\Admin software\PerfectLine-Admin(netbeans)\images\walkie-talkie.png"/>
+              <Image iconType="3" name="/images/walkie-talkie.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="114"/>
           </Properties>

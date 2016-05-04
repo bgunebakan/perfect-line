@@ -5,8 +5,10 @@
  */
 package perfectline.admin;
 
+import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -37,8 +39,9 @@ public class Client {
 
         
         try {
-            String url = "http://192.168.0.103:3000/add-channel/ttt";
-            //String url = "http://" + ClientIP + ":3000/" + command + "/" + channelName;
+            //String url = "http://127.0.0.1:3000/add-channel/Team1";
+            ClientIP = "127.0.0.1";
+            String url = "http://" + ClientIP + ":3000/" + command + "/" + channelName;
             System.out.println(url);
             
             URL obj = new URL(url);
@@ -57,7 +60,7 @@ public class Client {
             wr.writeBytes(urlParameters);
             wr.flush();
             wr.close();
-            /*
+            
             int responseCode = con.getResponseCode();
             System.out.println("\nSending 'POST' request to URL : " + url);
             System.out.println("Post parameters : " + urlParameters);
@@ -75,7 +78,7 @@ public class Client {
             
             //print result
             System.out.println(response.toString());
-            */
+            
             
         } catch (MalformedURLException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);

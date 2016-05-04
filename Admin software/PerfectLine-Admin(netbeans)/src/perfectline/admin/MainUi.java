@@ -7,6 +7,8 @@ package perfectline.admin;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
+import java.util.Timer;
+import java.util.TimerTask;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /**
@@ -57,6 +59,10 @@ public class MainUi extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        teamListPopup = new javax.swing.JPopupMenu();
+        popupQuarknumber = new javax.swing.JMenuItem();
+        talkButton = new javax.swing.JMenuItem();
+        removeQuark = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         AllList = new javax.swing.JPanel();
@@ -97,10 +103,35 @@ public class MainUi extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
 
+        popupQuarknumber.setText("quarkNumber");
+        popupQuarknumber.setEnabled(false);
+        teamListPopup.add(popupQuarknumber);
+
+        talkButton.setText("Özel Konuşma");
+        talkButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                talkButtonActionPerformed(evt);
+            }
+        });
+        teamListPopup.add(talkButton);
+
+        removeQuark.setText("Takımdan Çıkart");
+        removeQuark.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeQuarkActionPerformed(evt);
+            }
+        });
+        teamListPopup.add(removeQuark);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("PerfectLine Takım Haberleşme Sistemi");
         setPreferredSize(new java.awt.Dimension(940, 600));
         setResizable(false);
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                formMouseClicked(evt);
+            }
+        });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -114,7 +145,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         quark101.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark101.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark101.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark101.setText("101");
         quark101.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -124,7 +155,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark101);
 
         quark102.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark102.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark102.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark102.setText("102");
         quark102.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -134,7 +165,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark102);
 
         quark103.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark103.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark103.setText("103");
         quark103.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -144,7 +175,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark103);
 
         quark104.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark104.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark104.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark104.setText("104");
         quark104.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -164,7 +195,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark105);
 
         quark106.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark106.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark106.setText("106");
         quark106.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -174,7 +205,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark106);
 
         quark107.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark107.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark107.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark107.setText("107");
         quark107.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -184,7 +215,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark107);
 
         quark108.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark108.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark108.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark108.setText("108");
         quark108.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -204,7 +235,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark110);
 
         quark109.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark109.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark109.setText("110");
         quark109.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -214,7 +245,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark109);
 
         quark111.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark111.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark111.setText("111");
         quark111.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -224,7 +255,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark111);
 
         quark112.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark112.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark112.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark112.setText("112");
         quark112.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -234,7 +265,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark112);
 
         quark113.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark113.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark113.setText("113");
         quark113.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -244,7 +275,7 @@ public class MainUi extends javax.swing.JFrame {
         AllList.add(quark113);
 
         quark114.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark114.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark114.setText("114");
         quark114.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -263,17 +294,17 @@ public class MainUi extends javax.swing.JFrame {
         });
         AllList.add(quark115);
 
-        getContentPane().add(AllList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 380, 420));
+        getContentPane().add(AllList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 350, 420));
 
         TeamList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         quark131.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark131.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark131.setText("101");
         TeamList.add(quark131);
 
         quark132.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark132.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark132.setText("102");
         quark132.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -283,7 +314,7 @@ public class MainUi extends javax.swing.JFrame {
         TeamList.add(quark132);
 
         quark133.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark133.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark133.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark133.setText("103");
         quark133.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -293,7 +324,7 @@ public class MainUi extends javax.swing.JFrame {
         TeamList.add(quark133);
 
         quark134.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark134.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark134.setText("104");
         TeamList.add(quark134);
 
@@ -303,12 +334,12 @@ public class MainUi extends javax.swing.JFrame {
         TeamList.add(quark135);
 
         quark136.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark136.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark136.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark136.setText("106");
         TeamList.add(quark136);
 
         quark137.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark137.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark137.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark137.setText("107");
         quark137.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -318,7 +349,7 @@ public class MainUi extends javax.swing.JFrame {
         TeamList.add(quark137);
 
         quark138.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark138.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark138.setText("108");
         TeamList.add(quark138);
 
@@ -328,17 +359,17 @@ public class MainUi extends javax.swing.JFrame {
         TeamList.add(quark139);
 
         quark140.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark140.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark140.setText("110");
         TeamList.add(quark140);
 
         quark141.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark141.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark141.setText("111");
         TeamList.add(quark141);
 
         quark142.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark142.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark142.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark142.setText("112");
         quark142.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -348,12 +379,12 @@ public class MainUi extends javax.swing.JFrame {
         TeamList.add(quark142);
 
         quark143.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark143.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark143.setText("113");
         TeamList.add(quark143);
 
         quark144.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark144.setIcon(new javax.swing.ImageIcon("C:\\Users\\gunebakan\\Documents\\perfect-line\\Admin software\\PerfectLine-Admin(netbeans)\\images\\walkie-talkie.png")); // NOI18N
+        quark144.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark144.setText("114");
         TeamList.add(quark144);
 
@@ -362,7 +393,7 @@ public class MainUi extends javax.swing.JFrame {
         quark145.setText("115");
         TeamList.add(quark145);
 
-        getContentPane().add(TeamList, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 70, 380, 420));
+        getContentPane().add(TeamList, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, 360, 420));
 
         jMenu1.setText("Dosya");
 
@@ -596,16 +627,44 @@ public class MainUi extends javax.swing.JFrame {
        
         
     }//GEN-LAST:event_quark115MouseClicked
+       
+    boolean isAlreadyOneClick;
 
     private void quark133MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark133MouseClicked
-        Client client103 = new Client(103);
-        if(client103.Channelcommand("remove-channel", teamName)){
-            this.quark133.setVisible(false);
-            this.quark103.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        
+        
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.popupQuarknumber.setText("103");
+            this.teamListPopup.setVisible(true);
+            
         }
+        
     }//GEN-LAST:event_quark133MouseClicked
+
+    private void talkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_talkButtonActionPerformed
+        System.out.println("talking");
+    }//GEN-LAST:event_talkButtonActionPerformed
+
+    private void removeQuarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeQuarkActionPerformed
+       
+        Client client = new Client(Integer.parseInt(this.popupQuarknumber.getText()));
+  
+        if(client.Channelcommand("remove-channel", teamName)){
+        
+            this.quark133.setVisible(false);            
+            this.quark103.setVisible(true);
+            
+        }else{                    
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);        
+        }
+        this.teamListPopup.setVisible(false);
+          
+    }//GEN-LAST:event_removeQuarkActionPerformed
+
+    private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
+        this.teamListPopup.setVisible(false);
+    }//GEN-LAST:event_formMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -618,6 +677,7 @@ public class MainUi extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem popupQuarknumber;
     private javax.swing.JLabel quark101;
     private javax.swing.JLabel quark102;
     private javax.swing.JLabel quark103;
@@ -648,5 +708,8 @@ public class MainUi extends javax.swing.JFrame {
     private javax.swing.JLabel quark143;
     private javax.swing.JLabel quark144;
     private javax.swing.JLabel quark145;
+    private javax.swing.JMenuItem removeQuark;
+    private javax.swing.JMenuItem talkButton;
+    private javax.swing.JPopupMenu teamListPopup;
     // End of variables declaration//GEN-END:variables
 }

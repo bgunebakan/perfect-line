@@ -81,8 +81,8 @@ public class MainUi extends javax.swing.JFrame {
         quark106 = new javax.swing.JLabel();
         quark107 = new javax.swing.JLabel();
         quark108 = new javax.swing.JLabel();
-        quark110 = new javax.swing.JLabel();
         quark109 = new javax.swing.JLabel();
+        quark110 = new javax.swing.JLabel();
         quark111 = new javax.swing.JLabel();
         quark112 = new javax.swing.JLabel();
         quark113 = new javax.swing.JLabel();
@@ -142,7 +142,7 @@ public class MainUi extends javax.swing.JFrame {
         });
         allListPopup.add(talkAll);
 
-        addQuark.setText("Takımdan Çıkart");
+        addQuark.setText("Takıma Ekle");
         addQuark.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addQuarkActionPerformed(evt);
@@ -251,25 +251,25 @@ public class MainUi extends javax.swing.JFrame {
         });
         AllList.add(quark108);
 
-        quark110.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        quark110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
-        quark110.setText("109");
-        quark110.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                quark110MouseClicked(evt);
-            }
-        });
-        AllList.add(quark110);
-
         quark109.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark109.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
-        quark109.setText("110");
+        quark109.setText("109");
         quark109.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 quark109MouseClicked(evt);
             }
         });
         AllList.add(quark109);
+
+        quark110.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        quark110.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
+        quark110.setText("110");
+        quark110.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark110MouseClicked(evt);
+            }
+        });
+        AllList.add(quark110);
 
         quark111.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark111.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
@@ -328,6 +328,11 @@ public class MainUi extends javax.swing.JFrame {
         quark131.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark131.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark131.setText("101");
+        quark131.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark131MouseClicked(evt);
+            }
+        });
         TeamList.add(quark131);
 
         quark132.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -353,16 +358,31 @@ public class MainUi extends javax.swing.JFrame {
         quark134.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark134.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark134.setText("104");
+        quark134.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark134MouseClicked(evt);
+            }
+        });
         TeamList.add(quark134);
 
         quark135.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark135.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark135.setText("105");
+        quark135.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark135MouseClicked(evt);
+            }
+        });
         TeamList.add(quark135);
 
         quark136.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark136.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark136.setText("106");
+        quark136.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark136MouseClicked(evt);
+            }
+        });
         TeamList.add(quark136);
 
         quark137.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -378,21 +398,41 @@ public class MainUi extends javax.swing.JFrame {
         quark138.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark138.setText("108");
+        quark138.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark138MouseClicked(evt);
+            }
+        });
         TeamList.add(quark138);
 
         quark139.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark139.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark139.setText("109");
+        quark139.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark139MouseClicked(evt);
+            }
+        });
         TeamList.add(quark139);
 
         quark140.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark140.setText("110");
+        quark140.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark140MouseClicked(evt);
+            }
+        });
         TeamList.add(quark140);
 
         quark141.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark141.setText("111");
+        quark141.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark141MouseClicked(evt);
+            }
+        });
         TeamList.add(quark141);
 
         quark142.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -408,16 +448,31 @@ public class MainUi extends javax.swing.JFrame {
         quark143.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark143.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark143.setText("113");
+        quark143.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark143MouseClicked(evt);
+            }
+        });
         TeamList.add(quark143);
 
         quark144.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark144.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark144.setText("114");
+        quark144.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark144MouseClicked(evt);
+            }
+        });
         TeamList.add(quark144);
 
         quark145.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         quark145.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/walkie-talkie.png"))); // NOI18N
         quark145.setText("115");
+        quark145.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                quark145MouseClicked(evt);
+            }
+        });
         TeamList.add(quark145);
 
         getContentPane().add(TeamList, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 290, 420));
@@ -462,208 +517,196 @@ public class MainUi extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void quark102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark102MouseClicked
-        Client client102 = new Client(102);
-        if(client102.Channelcommand("add-channel", teamName)){
-            this.quark102.setVisible(false);
-            this.quark132.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("102");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark102MouseClicked
 
     private void quark107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark107MouseClicked
-        Client client107 = new Client(107);
-        if(client107.Channelcommand("add-channel", teamName)){
-            this.quark107.setVisible(false);
-            this.quark137.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("107");
+            this.teamListPopup.setVisible(true);
+            
         }
         
     }//GEN-LAST:event_quark107MouseClicked
 
     private void quark112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark112MouseClicked
-        Client client112 = new Client(112);
-        if(client112.Channelcommand("add-channel", teamName)){
-            this.quark112.setVisible(false);
-            this.quark142.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("112");
+            this.teamListPopup.setVisible(true);
+            
         }
         
     }//GEN-LAST:event_quark112MouseClicked
 
     private void quark132MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark132MouseClicked
-        //Client client112 = new Client(112);
-        //client112.Channelcommand("remove-channel", teamName);
-        this.quark132.setVisible(false);
-        this.quark102.setVisible(true);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("103");
+            this.teamListPopup.setVisible(true);
+            
+        }
     }//GEN-LAST:event_quark132MouseClicked
 
     private void quark137MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark137MouseClicked
-        this.quark137.setVisible(false);
-        this.quark107.setVisible(true);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("107");
+            this.teamListPopup.setVisible(true);
+            
+        }
     }//GEN-LAST:event_quark137MouseClicked
 
     private void quark142MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark142MouseClicked
-        this.quark142.setVisible(false);
-        this.quark112.setVisible(true);
+       if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("112");
+            this.teamListPopup.setVisible(true);
+            
+        }
     }//GEN-LAST:event_quark142MouseClicked
 
     private void quark101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark101MouseClicked
         if(evt.getButton() == 3){
-            this.allListPopup.setLocation(evt.getLocationOnScreen());
-            this.allpopupQuarknumber.setText("101");
-            this.allListPopup.setVisible(true);  
-        }
-        Client client101 = new Client(101);
-        if(client101.Channelcommand("add-channel", teamName)){
-            this.quark101.setVisible(false);
-            this.quark131.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("101");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark101MouseClicked
 
     private void quark103MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark103MouseClicked
-        Client client103 = new Client(103);
-        if(client103.Channelcommand("add-channel", teamName)){
-            this.quark103.setVisible(false);
-            this.quark133.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("103");
+            this.allListPopup.setVisible(true);
+            
         }
         
     }//GEN-LAST:event_quark103MouseClicked
 
     private void quark104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark104MouseClicked
-        Client client104 = new Client(104);
-        if(client104.Channelcommand("add-channel", teamName)){
-            this.quark104.setVisible(false);
-            this.quark134.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("104");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark104MouseClicked
 
     private void quark105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark105MouseClicked
-        Client client105 = new Client(105);
-        if(client105.Channelcommand("add-channel", teamName)){
-            this.quark105.setVisible(false);
-            this.quark135.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("105");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark105MouseClicked
 
     private void quark106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark106MouseClicked
-        Client client106 = new Client(106);
-        if(client106.Channelcommand("add-channel", teamName)){
-            this.quark106.setVisible(false);
-            this.quark136.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("106");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark106MouseClicked
 
     private void quark108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark108MouseClicked
-        Client client108 = new Client(108);
-        if(client108.Channelcommand("add-channel", teamName)){
-            this.quark108.setVisible(false);
-            this.quark138.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("108");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark108MouseClicked
 
     private void quark110MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark110MouseClicked
-        Client client110 = new Client(110);
-        if(client110.Channelcommand("add-channel", teamName)){
-            this.quark110.setVisible(false);
-            this.quark140.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("110");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark110MouseClicked
 
     private void quark109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark109MouseClicked
-        Client client109 = new Client(109);
-        if(client109.Channelcommand("add-channel", teamName)){
-            this.quark109.setVisible(false);
-            this.quark139.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("109");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark109MouseClicked
 
     private void quark111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark111MouseClicked
-        Client client111 = new Client(111);
-        if(client111.Channelcommand("add-channel", teamName)){
-            this.quark111.setVisible(false);
-            this.quark141.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("111");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark111MouseClicked
 
     private void quark113MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark113MouseClicked
-        Client client113 = new Client(113);
-        if(client113.Channelcommand("add-channel", teamName)){
-            this.quark113.setVisible(false);
-            this.quark143.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("113");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark113MouseClicked
 
     private void quark114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark114MouseClicked
-        Client client114 = new Client(114);
-        if(client114.Channelcommand("add-channel", teamName)){
-            this.quark114.setVisible(false);
-            this.quark144.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("114");
+            this.teamListPopup.setVisible(true);
+            
         }
         
         
     }//GEN-LAST:event_quark114MouseClicked
 
     private void quark115MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark115MouseClicked
-        Client client115 = new Client(115);
-        if(client115.Channelcommand("add-channel", teamName)){
-            this.quark115.setVisible(false);
-            this.quark145.setVisible(true);
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("115");
+            this.teamListPopup.setVisible(true);
+            
         }
        
         
     }//GEN-LAST:event_quark115MouseClicked
        
-    boolean isAlreadyOneClick;
-
     private void quark133MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark133MouseClicked
-        
         
         if(evt.getButton() == 3){
             this.teamListPopup.setLocation(evt.getLocationOnScreen());
@@ -684,8 +727,7 @@ public class MainUi extends javax.swing.JFrame {
   
         if(client.Channelcommand("remove-channel", teamName)){
         
-            this.quark133.setVisible(false);            
-            this.quark103.setVisible(true);
+            removefromTeam(Integer.parseInt(this.teampopupQuarknumber.getText()));
             
         }else{                    
             JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);        
@@ -696,6 +738,7 @@ public class MainUi extends javax.swing.JFrame {
 
     private void formMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseClicked
         this.teamListPopup.setVisible(false);
+        this.allListPopup.setVisible(false);
     }//GEN-LAST:event_formMouseClicked
 
     private void talkAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_talkAllActionPerformed
@@ -705,19 +748,245 @@ public class MainUi extends javax.swing.JFrame {
     private void addQuarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQuarkActionPerformed
         Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
         if(client.Channelcommand("add-channel", teamName)){
-            
-                String strClassName = "quark" + allpopupQuarknumber.getText();
-                
-                quark103.setVisible(false);
-                quark139.setVisible(true);
-                
-            
+            addtoTeam(Integer.parseInt(this.allpopupQuarknumber.getText()));
         }else{
             JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_addQuarkActionPerformed
 
+    private void quark131MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark131MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("101");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark131MouseClicked
 
+    private void quark134MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark134MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("104");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark134MouseClicked
+
+    private void quark135MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark135MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("105");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark135MouseClicked
+
+    private void quark136MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark136MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("106");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark136MouseClicked
+
+    private void quark138MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark138MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("108");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark138MouseClicked
+
+    private void quark139MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark139MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("109");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark139MouseClicked
+
+    private void quark140MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark140MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("110");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark140MouseClicked
+
+    private void quark141MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark141MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("111");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark141MouseClicked
+
+    private void quark143MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark143MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("113");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark143MouseClicked
+
+    private void quark144MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark144MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("114");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark144MouseClicked
+
+    private void quark145MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark145MouseClicked
+        if(evt.getButton() == 3){
+            this.teamListPopup.setLocation(evt.getLocationOnScreen());
+            this.teampopupQuarknumber.setText("115");
+            this.teamListPopup.setVisible(true);
+            
+        }
+    }//GEN-LAST:event_quark145MouseClicked
+
+private void addtoTeam(int quarkId){
+    //Its idiot code i have ever write
+    
+    switch (quarkId) {
+            case 101:  
+                quark101.setVisible(false);
+                quark131.setVisible(true);
+            break;
+            case 102:  
+                quark102.setVisible(false);
+                quark132.setVisible(true);
+            break;
+            case 103:  
+                quark103.setVisible(false);
+                quark133.setVisible(true);
+            break;
+            case 104:  
+                quark104.setVisible(false);
+                quark134.setVisible(true);
+            break;
+            case 105:  
+                quark105.setVisible(false);
+                quark135.setVisible(true);
+            break;
+            case 106:  
+                quark106.setVisible(false);
+                quark136.setVisible(true);
+            break;
+            case 107:  
+                quark107.setVisible(false);
+                quark137.setVisible(true);
+            break;
+            case 108:  
+                quark108.setVisible(false);
+                quark138.setVisible(true);
+            break;
+            case 109:  
+                quark109.setVisible(false);
+                quark139.setVisible(true);
+            break;
+            case 110:  
+                quark110.setVisible(false);
+                quark140.setVisible(true);
+            break;    
+            case 111:  
+                quark111.setVisible(false);
+                quark141.setVisible(true);
+            break;
+            case 112:  
+                quark112.setVisible(false);
+                quark142.setVisible(true);
+            break;
+            case 113:  
+                quark113.setVisible(false);
+                quark143.setVisible(true);
+            break;
+            case 114:  
+                quark114.setVisible(false);
+                quark144.setVisible(true);
+            break;
+            case 115:  
+                quark115.setVisible(false);
+                quark145.setVisible(true);
+            break;
+    }
+    
+}
+private void removefromTeam(int quarkId){
+    //Its idiot code i have ever write
+    
+    switch (quarkId) {
+            case 101:  
+                quark101.setVisible(true);
+                quark131.setVisible(false);
+            break;
+            case 102:  
+                quark102.setVisible(true);
+                quark132.setVisible(false);
+            break;
+            case 103:  
+                quark103.setVisible(true);
+                quark133.setVisible(false);
+            break;
+            case 104:  
+                quark104.setVisible(true);
+                quark134.setVisible(false);
+            break;
+            case 105:  
+                quark105.setVisible(true);
+                quark135.setVisible(false);
+            break;
+            case 106:  
+                quark106.setVisible(true);
+                quark136.setVisible(false);
+            break;
+            case 107:  
+                quark107.setVisible(true);
+                quark137.setVisible(false);
+            break;
+            case 108:  
+                quark108.setVisible(true);
+                quark138.setVisible(false);
+            break;
+            case 109:  
+                quark109.setVisible(true);
+                quark139.setVisible(false);
+            break;
+            case 110:  
+                quark110.setVisible(true);
+                quark140.setVisible(false);
+            break;    
+            case 111:  
+                quark111.setVisible(true);
+                quark141.setVisible(false);
+            break;
+            case 112:  
+                quark112.setVisible(true);
+                quark142.setVisible(false);
+            break;
+            case 113:  
+                quark113.setVisible(true);
+                quark143.setVisible(false);
+            break;
+            case 114:  
+                quark114.setVisible(true);
+                quark144.setVisible(false);
+            break;
+            case 115:  
+                quark115.setVisible(true);
+                quark145.setVisible(false);
+            break;
+    }
+    
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AllList;
     private javax.swing.JPanel TeamList;

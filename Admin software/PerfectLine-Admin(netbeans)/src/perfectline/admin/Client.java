@@ -40,7 +40,7 @@ public class Client {
         
         try {
             //String url = "http://127.0.0.1:3000/add-channel/Team1";
-            ClientIP = "127.0.0.1";
+           //ClientIP = "192.168.0.13";
             String url = "http://" + ClientIP + ":3000/" + command + "/" + channelName;
             System.out.println(url);
             

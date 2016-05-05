@@ -25,6 +25,7 @@ public class MainUi extends javax.swing.JFrame {
      */
     
     String teamName = "Team1";
+    String masterName = "201";
     
     
     public MainUi() {
@@ -719,6 +720,18 @@ public class MainUi extends javax.swing.JFrame {
 
     private void talkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_talkButtonActionPerformed
         System.out.println("talking with team member");
+        
+        Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
+        Client masterClient = new Client(13); //Integer.parseInt(masterName)
+        if(client.Channelcommand("remove-channel", masterName) &&
+                masterClient.Channelcommand("remove-channel", masterName) &&
+                masterClient.Channelcommand("add-channel", masterName) &&
+                client.Channelcommand("join-channel", masterName)){
+            addtoTeam(Integer.parseInt(this.allpopupQuarknumber.getText()));
+        }else{
+            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        }
+        
     }//GEN-LAST:event_talkButtonActionPerformed
 
     private void removeQuarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeQuarkActionPerformed

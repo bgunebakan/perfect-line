@@ -7,9 +7,9 @@ package perfectline.admin;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import java.util.HashMap;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.io.IOException;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -24,17 +24,33 @@ public class MainUi extends javax.swing.JFrame {
      * Creates new form MainUi
      */
     
-    String teamName = "Team1";
+    String teamName = "team1";
     String masterName = "201";
     
     
     public MainUi() {
         
-        initComponents();        
+        initComponents();   
+                
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
         //clear Team buttons
+        this.quark101.setVisible(false);
+        this.quark102.setVisible(false);
+        this.quark103.setVisible(false);
+        this.quark104.setVisible(false);
+        this.quark105.setVisible(false);
+        this.quark106.setVisible(false);
+        this.quark107.setVisible(false);
+        this.quark108.setVisible(false);
+        this.quark109.setVisible(false);
+        this.quark110.setVisible(false);
+        this.quark111.setVisible(false);
+        this.quark112.setVisible(false);
+        this.quark113.setVisible(false);
+        this.quark114.setVisible(false);
+        this.quark115.setVisible(false);
         this.quark131.setVisible(false);
         this.quark132.setVisible(false);
         this.quark133.setVisible(false);
@@ -50,6 +66,11 @@ public class MainUi extends javax.swing.JFrame {
         this.quark143.setVisible(false);
         this.quark144.setVisible(false);
         this.quark145.setVisible(false);
+        
+        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
+        masterClient.Channelcommand("join-channel", this.teamName);
+        
+        checkClients(103);
         
         this.setVisible(true);
     }
@@ -105,6 +126,10 @@ public class MainUi extends javax.swing.JFrame {
         quark143 = new javax.swing.JLabel();
         quark144 = new javax.swing.JLabel();
         quark145 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        panelSound = new javax.swing.JButton();
+        soundStatus = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -152,7 +177,7 @@ public class MainUi extends javax.swing.JFrame {
         allListPopup.add(addQuark);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("PerfectLine Takım Haberleşme Sistemi");
+        setTitle("ZBT Kablosuz Intercom Kontrol Paneli");
         setPreferredSize(new java.awt.Dimension(940, 600));
         setResizable(false);
         addMouseListener(new java.awt.event.MouseAdapter() {
@@ -164,11 +189,11 @@ public class MainUi extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Takım Listesi");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 40, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel2.setText("Tüm kullanıcılar");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
 
         AllList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -322,7 +347,7 @@ public class MainUi extends javax.swing.JFrame {
         });
         AllList.add(quark115);
 
-        getContentPane().add(AllList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 290, 420));
+        getContentPane().add(AllList, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 290, 420));
 
         TeamList.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -476,7 +501,28 @@ public class MainUi extends javax.swing.JFrame {
         });
         TeamList.add(quark145);
 
-        getContentPane().add(TeamList, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, 290, 420));
+        getContentPane().add(TeamList, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 120, 290, 420));
+
+        jLabel3.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
+        jLabel3.setText("Eğitmen No:");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Cantarell", 1, 36)); // NOI18N
+        jLabel4.setText("201");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 90, -1));
+
+        panelSound.setText("Panel Sesi");
+        panelSound.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                panelSoundActionPerformed(evt);
+            }
+        });
+        getContentPane().add(panelSound, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 160, -1));
+
+        soundStatus.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
+        soundStatus.setForeground(new java.awt.Color(217, 23, 18));
+        soundStatus.setText("açık");
+        getContentPane().add(soundStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 120, -1));
 
         jMenu1.setText("Dosya");
 
@@ -509,20 +555,20 @@ public class MainUi extends javax.swing.JFrame {
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
                     
-        JOptionPane.showMessageDialog(new JFrame(), "PerfectLine Takım iletişim Yazılımı. 2016", "Hakkında",JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(new JFrame(), "ZBT Kablosuz Intercom Sistemi 2016 \n www.zbt.com.tr", "Hakkında",JOptionPane.INFORMATION_MESSAGE);
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void quark102MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark102MouseClicked
         
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("102");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("102");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -531,9 +577,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark107MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark107MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("107");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("107");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -541,9 +587,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark112MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("112");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("112");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -552,7 +598,7 @@ public class MainUi extends javax.swing.JFrame {
     private void quark132MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark132MouseClicked
         if(evt.getButton() == 3){
             this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("103");
+            this.teampopupQuarknumber.setText("102");
             this.teamListPopup.setVisible(true);
             
         }
@@ -578,9 +624,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark101MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark101MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("101");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("101");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -599,9 +645,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark104MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark104MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("104");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("104");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -610,9 +656,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark105MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark105MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("105");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("105");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -621,9 +667,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark106MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("106");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("106");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -632,9 +678,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark108MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark108MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("108");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("108");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -643,9 +689,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark110MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark110MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("110");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("110");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -654,9 +700,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark109MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark109MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("109");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("109");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -665,9 +711,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark111MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark111MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("111");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("111");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -676,9 +722,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark113MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark113MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("113");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("113");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -687,9 +733,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark114MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("114");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("114");
+            this.allListPopup.setVisible(true);
             
         }
         
@@ -698,9 +744,9 @@ public class MainUi extends javax.swing.JFrame {
 
     private void quark115MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_quark115MouseClicked
         if(evt.getButton() == 3){
-            this.teamListPopup.setLocation(evt.getLocationOnScreen());
-            this.teampopupQuarknumber.setText("115");
-            this.teamListPopup.setVisible(true);
+            this.allListPopup.setLocation(evt.getLocationOnScreen());
+            this.allpopupQuarknumber.setText("115");
+            this.allListPopup.setVisible(true);
             
         }
        
@@ -720,25 +766,52 @@ public class MainUi extends javax.swing.JFrame {
 
     private void talkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_talkButtonActionPerformed
         System.out.println("talking with team member");
+        this.teamListPopup.setVisible(false);
+        this.allListPopup.setVisible(false);
         
-        Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
-        Client masterClient = new Client(13); //Integer.parseInt(masterName)
-        if(client.Channelcommand("remove-channel", masterName) &&
-                masterClient.Channelcommand("remove-channel", masterName) &&
-                masterClient.Channelcommand("add-channel", masterName) &&
-                client.Channelcommand("join-channel", masterName)){
-            addtoTeam(Integer.parseInt(this.allpopupQuarknumber.getText()));
-        }else{
-            JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
+        Client client = new Client(Integer.parseInt(this.teampopupQuarknumber.getText()));
+        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
+        client.Channelcommand("join-channel", "201");
+        try {
+           Thread.sleep(100);                 //1000 milliseconds is one second.
+        } catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }        
+        masterClient.Channelcommand("join-channel", "201");
+            
+        addtoTeam(Integer.parseInt(this.teampopupQuarknumber.getText()));
+         
+        Object[] options = {"Tamam"};
+    
+        int n = JOptionPane.showOptionDialog(null,
+           
+                teampopupQuarknumber.getText()+" nolu atıcı ile \nkonuşmanız bitince Tamam'a tıklayınız. ","Özel Konuşma",
+                JOptionPane.PLAIN_MESSAGE,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                options[0]);
+            
+        if (n == 0) {
+            client.Channelcommand("join-channel", this.teamName);
+            masterClient.Channelcommand("join-channel", this.teamName);
         }
+            
+            
+        
+        
+        
         
     }//GEN-LAST:event_talkButtonActionPerformed
 
     private void removeQuarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeQuarkActionPerformed
        
+        this.teamListPopup.setVisible(false);
+        this.allListPopup.setVisible(false);
+        
         Client client = new Client(Integer.parseInt(this.teampopupQuarknumber.getText()));
   
-        if(client.Channelcommand("remove-channel", teamName)){
+        if(client.Channelcommand("join-channel", "all")){
         
             removefromTeam(Integer.parseInt(this.teampopupQuarknumber.getText()));
             
@@ -756,11 +829,43 @@ public class MainUi extends javax.swing.JFrame {
 
     private void talkAllActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_talkAllActionPerformed
         System.out.println("talking with non team member");
+        this.teamListPopup.setVisible(false);
+        this.allListPopup.setVisible(false);
+        
+        
+        Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
+        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
+        client.Channelcommand("join-channel", "201");
+        try {
+           Thread.sleep(100);                 //1000 milliseconds is one second.
+        } catch(InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        }        
+        masterClient.Channelcommand("join-channel", "201");
+            
+        Object[] options = {"Tamam"};
+    
+        int n = JOptionPane.showOptionDialog(null,
+           
+                allpopupQuarknumber.getText()+" nolu atıcı ile \nkonuşmanız bitince Tamam'a tıklayınız. ","Özel Konuşma",
+                JOptionPane.PLAIN_MESSAGE,
+                JOptionPane.INFORMATION_MESSAGE,
+                null,
+                options,
+                options[0]);
+            
+        if (n == 0) {
+            client.Channelcommand("join-channel", "all");
+            masterClient.Channelcommand("join-channel", this.teamName);
+        }
     }//GEN-LAST:event_talkAllActionPerformed
 
     private void addQuarkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addQuarkActionPerformed
+        this.teamListPopup.setVisible(false);
+        this.allListPopup.setVisible(false);
+        
         Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
-        if(client.Channelcommand("add-channel", teamName)){
+        if(client.Channelcommand("join-channel", teamName)){
             addtoTeam(Integer.parseInt(this.allpopupQuarknumber.getText()));
         }else{
             JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
@@ -866,7 +971,48 @@ public class MainUi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_quark145MouseClicked
 
-private void addtoTeam(int quarkId){
+    private void panelSoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_panelSoundActionPerformed
+        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
+        masterClient.Channelcommand("mute", "");
+        soundStatus.setText(masterClient.Response);
+    }//GEN-LAST:event_panelSoundActionPerformed
+
+    private void checkClients(int lastClientID){
+        
+        int i;
+        
+        for (i=101;i<=lastClientID;i++){
+            if(isReachable(i)){
+                System.out.println(i + " nolu cihaz bağlandı.");
+                addtoList(i);
+            }
+        }
+     
+    }
+            
+public static boolean isReachable(int targetIP)
+{
+    try {
+            InetAddress inet;
+            
+            inet = InetAddress.getByAddress(new byte[] { (byte)192, (byte)168, 0, (byte)targetIP });
+            System.out.println("Sending Ping Request to " + inet);
+        
+            return inet.isReachable(5000);
+                         
+                         
+            
+            
+        } catch (UnknownHostException ex) {
+            Logger.getLogger(MainUi.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(MainUi.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    return false;
+}
+
+
+    private void addtoTeam(int quarkId){
     //Its idiot code i have ever write
     
     switch (quarkId) {
@@ -1000,6 +1146,58 @@ private void removefromTeam(int quarkId){
     }
     
 }
+    private void addtoList(int quarkId){
+    //Its idiot code i have ever write
+    
+    switch (quarkId) {
+            case 101:  
+                quark101.setVisible(true);
+            break;
+            case 102:  
+                quark102.setVisible(true);
+            break;
+            case 103:  
+                quark103.setVisible(true);
+            break;
+            case 104:  
+                quark104.setVisible(true);
+            break;
+            case 105:  
+                quark105.setVisible(true);
+            break;
+            case 106:  
+                quark106.setVisible(true);
+            break;
+            case 107:  
+                quark107.setVisible(true);
+            break;
+            case 108:  
+                quark108.setVisible(true);
+            break;
+            case 109:  
+                quark109.setVisible(true);
+            break;
+            case 110:  
+                quark110.setVisible(true);
+            break;    
+            case 111:  
+                quark111.setVisible(true);
+            break;
+            case 112:  
+                quark112.setVisible(true);
+            break;
+            case 113:  
+                quark113.setVisible(true);
+            break;
+            case 114:  
+                quark114.setVisible(true);
+            break;
+            case 115:  
+                quark115.setVisible(true);
+            break;
+    }
+    
+}
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel AllList;
     private javax.swing.JPanel TeamList;
@@ -1008,11 +1206,14 @@ private void removefromTeam(int quarkId){
     private javax.swing.JMenuItem allpopupQuarknumber;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JButton panelSound;
     private javax.swing.JLabel quark101;
     private javax.swing.JLabel quark102;
     private javax.swing.JLabel quark103;
@@ -1044,6 +1245,7 @@ private void removefromTeam(int quarkId){
     private javax.swing.JLabel quark144;
     private javax.swing.JLabel quark145;
     private javax.swing.JMenuItem removeQuark;
+    private javax.swing.JLabel soundStatus;
     private javax.swing.JMenuItem talkAll;
     private javax.swing.JMenuItem talkButton;
     private javax.swing.JPopupMenu teamListPopup;

@@ -24,6 +24,7 @@ public class Client {
     
     String ClientIP;
     int quarkId;
+    String Response;
     
     Client(int quarkId){
         
@@ -77,6 +78,7 @@ public class Client {
             in.close();
             
             //print result
+            Response = response.toString();
             System.out.println(response.toString());
             
             

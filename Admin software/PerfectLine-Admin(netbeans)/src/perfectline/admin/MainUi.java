@@ -67,8 +67,8 @@ public class MainUi extends javax.swing.JFrame {
         this.quark144.setVisible(false);
         this.quark145.setVisible(false);
         
-        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
-        masterClient.Channelcommand("join-channel", this.teamName);
+        Client masterClient = new Client(masterName); //Integer.parseInt(masterName)
+        masterClient.Channelcommand("join", this.teamName);
         
         checkClients(103);
         
@@ -128,8 +128,7 @@ public class MainUi extends javax.swing.JFrame {
         quark145 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        panelSound = new javax.swing.JButton();
-        soundStatus = new javax.swing.JLabel();
+        panelMuted = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
@@ -511,18 +510,14 @@ public class MainUi extends javax.swing.JFrame {
         jLabel4.setText("201");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 90, -1));
 
-        panelSound.setText("Panel Sesi");
-        panelSound.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                panelSoundActionPerformed(evt);
+        panelMuted.setSelected(true);
+        panelMuted.setText("Eğitmen Kulaklığı");
+        panelMuted.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                panelMutedStateChanged(evt);
             }
         });
-        getContentPane().add(panelSound, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, 160, -1));
-
-        soundStatus.setFont(new java.awt.Font("Cantarell", 0, 18)); // NOI18N
-        soundStatus.setForeground(new java.awt.Color(217, 23, 18));
-        soundStatus.setText("açık");
-        getContentPane().add(soundStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 550, 120, -1));
+        getContentPane().add(panelMuted, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 550, -1, -1));
 
         jMenu1.setText("Dosya");
 
@@ -769,15 +764,15 @@ public class MainUi extends javax.swing.JFrame {
         this.teamListPopup.setVisible(false);
         this.allListPopup.setVisible(false);
         
-        Client client = new Client(Integer.parseInt(this.teampopupQuarknumber.getText()));
-        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
-        client.Channelcommand("join-channel", "201");
+        Client client = new Client(this.teampopupQuarknumber.getText());
+        Client masterClient = new Client(masterName); //Integer.parseInt(masterName)
+        client.Channelcommand("join", "201");
         try {
            Thread.sleep(100);                 //1000 milliseconds is one second.
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }        
-        masterClient.Channelcommand("join-channel", "201");
+        masterClient.Channelcommand("join", "201");
             
         addtoTeam(Integer.parseInt(this.teampopupQuarknumber.getText()));
          
@@ -793,8 +788,8 @@ public class MainUi extends javax.swing.JFrame {
                 options[0]);
             
         if (n == 0) {
-            client.Channelcommand("join-channel", this.teamName);
-            masterClient.Channelcommand("join-channel", this.teamName);
+            client.Channelcommand("join", this.teamName);
+            masterClient.Channelcommand("join", this.teamName);
         }
             
             
@@ -809,9 +804,9 @@ public class MainUi extends javax.swing.JFrame {
         this.teamListPopup.setVisible(false);
         this.allListPopup.setVisible(false);
         
-        Client client = new Client(Integer.parseInt(this.teampopupQuarknumber.getText()));
+        Client client = new Client(this.teampopupQuarknumber.getText());
   
-        if(client.Channelcommand("join-channel", "all")){
+        if(client.Channelcommand("join", "all")){
         
             removefromTeam(Integer.parseInt(this.teampopupQuarknumber.getText()));
             
@@ -833,15 +828,15 @@ public class MainUi extends javax.swing.JFrame {
         this.allListPopup.setVisible(false);
         
         
-        Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
-        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
-        client.Channelcommand("join-channel", "201");
+        Client client = new Client(this.allpopupQuarknumber.getText());
+        Client masterClient = new Client(masterName); //Integer.parseInt(masterName)
+        client.Channelcommand("join", "201");
         try {
            Thread.sleep(100);                 //1000 milliseconds is one second.
         } catch(InterruptedException ex) {
             Thread.currentThread().interrupt();
         }        
-        masterClient.Channelcommand("join-channel", "201");
+        masterClient.Channelcommand("join", "201");
             
         Object[] options = {"Tamam"};
     
@@ -855,8 +850,8 @@ public class MainUi extends javax.swing.JFrame {
                 options[0]);
             
         if (n == 0) {
-            client.Channelcommand("join-channel", "all");
-            masterClient.Channelcommand("join-channel", this.teamName);
+            client.Channelcommand("join", "all");
+            masterClient.Channelcommand("join", this.teamName);
         }
     }//GEN-LAST:event_talkAllActionPerformed
 
@@ -864,8 +859,8 @@ public class MainUi extends javax.swing.JFrame {
         this.teamListPopup.setVisible(false);
         this.allListPopup.setVisible(false);
         
-        Client client = new Client(Integer.parseInt(this.allpopupQuarknumber.getText()));
-        if(client.Channelcommand("join-channel", teamName)){
+        Client client = new Client(this.allpopupQuarknumber.getText());
+        if(client.Channelcommand("join", teamName)){
             addtoTeam(Integer.parseInt(this.allpopupQuarknumber.getText()));
         }else{
             JOptionPane.showMessageDialog(new JFrame(), "Kablosuz Cihaza Bağlanılamıyor!", "Hata!",JOptionPane.ERROR_MESSAGE);
@@ -971,21 +966,32 @@ public class MainUi extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_quark145MouseClicked
 
-    private void panelSoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_panelSoundActionPerformed
-        Client masterClient = new Client(Integer.parseInt(masterName)); //Integer.parseInt(masterName)
-        masterClient.Channelcommand("mute", "");
-        soundStatus.setText(masterClient.Response);
-    }//GEN-LAST:event_panelSoundActionPerformed
+    private void panelMutedStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_panelMutedStateChanged
+        if(panelMuted.isSelected()){
+            Client masterClient = new Client(masterName); //Integer.parseInt(masterName)
+            masterClient.Channelcommand("mute", "False");
+        }else{
+            Client masterClient = new Client(masterName); //Integer.parseInt(masterName)
+            masterClient.Channelcommand("mute", "True");
+        }
+    }//GEN-LAST:event_panelMutedStateChanged
 
     private void checkClients(int lastClientID){
         
         int i;
         
         for (i=101;i<=lastClientID;i++){
-            if(isReachable(i)){
-                System.out.println(i + " nolu cihaz bağlandı.");
-                addtoList(i);
-            }
+
+                Client client = new Client(String.valueOf(i));
+                if(client.Channelcommand("join", "all")){
+                    
+                    addtoList(i);
+                    
+                }else{                    
+                    //JOptionPane.showMessageDialog(new JFrame(), i +" nolu cihaz ile haberleşme hatası!", "Hata!",JOptionPane.ERROR_MESSAGE);        
+                }
+                
+            
         }
      
     }
@@ -1213,7 +1219,7 @@ private void removefromTeam(int quarkId){
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JButton panelSound;
+    private javax.swing.JCheckBox panelMuted;
     private javax.swing.JLabel quark101;
     private javax.swing.JLabel quark102;
     private javax.swing.JLabel quark103;
@@ -1245,7 +1251,6 @@ private void removefromTeam(int quarkId){
     private javax.swing.JLabel quark144;
     private javax.swing.JLabel quark145;
     private javax.swing.JMenuItem removeQuark;
-    private javax.swing.JLabel soundStatus;
     private javax.swing.JMenuItem talkAll;
     private javax.swing.JMenuItem talkButton;
     private javax.swing.JPopupMenu teamListPopup;

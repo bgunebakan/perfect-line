@@ -23,12 +23,13 @@ import static org.apache.http.HttpHeaders.USER_AGENT;
 public class Client {
     
     String ClientIP;
-    int quarkId;
+    String quarkId;
     String Response;
     
-    Client(int quarkId){
+    Client(String id){
         
-            ClientIP = "192.168.0." + quarkId;
+            quarkId = id;
+            ClientIP = "192.168.0.201";
             
  
  
@@ -42,7 +43,7 @@ public class Client {
         try {
             //String url = "http://127.0.0.1:3000/add-channel/Team1";
            //ClientIP = "192.168.0.13";
-            String url = "http://" + ClientIP + ":3000/" + command + "/" + channelName;
+            String url = "http://" + ClientIP + ":3000/" + quarkId + "/" + command + "/" + channelName;
             System.out.println(url);
             
             URL obj = new URL(url);
@@ -80,7 +81,9 @@ public class Client {
             //print result
             Response = response.toString();
             System.out.println(response.toString());
-            
+            if (Response.equals("error")){
+                return false;
+            }
             
         } catch (MalformedURLException ex) {
             Logger.getLogger(Client.class.getName()).log(Level.SEVERE, null, ex);
